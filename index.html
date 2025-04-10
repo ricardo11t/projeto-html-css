@@ -5,33 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header class="cabeçalho">
-        <div class="container">   
-            <img class="logo" src="https://geracaotech.iel-ce.org.br/wp-content/themes/geracaotech/images/logo-gt2.png" alt="">
+        <div class="container">
+            <img class="logo" src="https://geracaotech.iel-ce.org.br/wp-content/themes/geracaotech/images/logo-gt2.png" alt="Logo Geração Tech">
             <nav>
                 <ul class="menu">
-                    <li>
-                        <a href="#sobre">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="#conteudo">Conteúdo</a>
-                    </li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#conteudo">Conteúdo</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <body>
-        <div class="banner">
-            <h1 class="c1h">Landing Page Project</h1>
-            <p class="c1p">Exercício de html & css GTSUL</p>
-        </div>
-        <a href="https://lms.iel-ce.org.br/login/acesso.php" class="button" target="_blank">Moodle</a>
-        <div class="#sobre">
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <p>A</p>
-        </div>
-    </body>
+
+    <!-- Banner -->
+    <main>
+        <section class="banner">
+            <div class="video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="https://lms.iel-ce.org.br/login/videos/background.mp4" type="video/mp4">
+                </video>
+                <div class="overlay"></div>
+            </div>
+            <div class="container">
+                <h1>Landing Page Project</h1>
+                <p>Exercício de HTML & CSS GTSUL</p>
+                <a href="https://lms.iel-ce.org.br/login/acesso.php" class="button" target="_blank">Moodle</a>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section class="sobre" id="sobre">
+            <div class="container">
+                <h2>Sobre o curso</h2>
+                <div class="sobre-conteudo">
+                    <img class="img-sobre" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_MwYhJZO7wXIzpFqbIolSO1NQMZRaiuzd2ZQNRnAsJNUs7bTQ6nDDEMD9Cd8QPIokob0&usqp=CAU" alt="Imagem sobre o curso">
+                    <div>
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi eu sit...</p>
+                        <ul>
+                            <li>HTML5 e Semântica</li>
+                            <li>CSS3 e Flexbox</li>
+                            <li>Grid e Layout</li>
+                            <li>Responsividade</li>
+                            <li>Animações CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

@@ -1,0 +1,203 @@
+/* ==========================
+   Estilos Globais e Reset
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.6rem;
+    color: var(--cor-texto);
+}
+
+/* ==========================
+   Variáveis de Tema
+========================== */
+:root {
+    --cor-primaria: #0a243e;
+    --cor-secundaria: #0e476d;
+    --cor-destaque: #e74c3c;
+    --cor-texto: #333;
+    --cor-clara: #f9f9f9;
+    --sombra: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================
+   Layouts e Containers
+========================== */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.menu a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0.5rem 0;
+}
+
+/* ==========================
+   Cabeçalho
+========================== */
+.cabeçalho {
+    background-color: var(--cor-primaria);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    height: 100px;
+}
+
+.cabeçalho .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ==========================
+   Componentes
+========================== */
+.logo {
+    width: 150px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* ==========================
+   Banner
+========================== */
+/*.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    z-index: 2;
+}
+
+/*.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/*.banner p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+} */
+
+/*.banner h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: clamp(2rem, 5vw, 3rem);
+} */
+
+/* ==========================
+   Sobre o Curso
+========================== */
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.sobre-conteudo img {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    box-shadow: var(--sombra);
+}
+
+/* ==========================
+   Efeitos e Transições
+========================== */
+::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cor-destaque);
+    transition: width 0.3s ease;
+}
+
+.banner {
+    position: relative; /* Posiciona o banner sobre o vídeo */
+    height: 180vh; /* Centraliza verticalmente */
+    display: flex; /* Permite o uso de flexbox para centralização */
+    align-items: center; /* Centraliza horizontalmente */
+    color: var(--cor-clara);
+    overflow: hidden; /* Garante que o conteúdo não transborde */
+    top: 0;
+    left: 0; /* Centraliza horizontalmente */;
+    color: white; /* Garante que o texto seja visível */
+    text-align: left; /* Centraliza o texto */
+    z-index: 2; /* Garante que o banner fique acima do vídeo */
+    padding-left: 80px;
+}
+
+.banner h2,
+.banner p {
+    position: relative; /* Garante que o texto respeite o contexto do banner */
+    z-index: 3; /* Garante que o texto fique acima da camada de sobreposição */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adiciona contraste ao texto */
+    padding-bottom: 1rem;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adiciona uma camada escura para contraste */
+    z-index: 1; /* Coloca a camada acima do vídeo, mas abaixo do texto */
+}
+
+.video-container {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.video-container video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre todo o espaço do contêiner */
+    object-position: center; /* Centraliza o vídeo */
+}
