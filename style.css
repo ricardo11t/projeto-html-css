@@ -230,15 +230,25 @@ ul {
     color: var(--cor-primaria);
 }
 
-.sobre-texto {
-    display: flex;
+.texto-sobre {
     gap: 4rem;
-    font-size: 15px;
+    font-size: 16px;
 }
 
-.sobre-texto ul {
-    list-style: none;
+.texto-sobre ul {
     margin-top: 1rem;
+    color: var(--cor-texto);
+}
+
+.texto-sobre ul li::marker {
+    color: var(--cor-destaque);
+    font-size: 0.7rem;
+}
+.sobre-texto {
+    display: flex;
+    color: var(--cor-texto);
+    gap: 4rem;
+    font-size: 15px;
 }
 
 /* ==========================
@@ -255,10 +265,20 @@ ul {
     gap: 1rem;
 }
 
+.imagem-container {
+    aspect-ratio: 0.75;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
 .grid-imagens img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s;
+}
+.img-galeria{
+    overflow: hidden;
     border-radius: 8px;
 }
 
@@ -308,7 +328,7 @@ ul {
     color: white;
     text-decoration: none;
     display: inline-block;
-    padding: 0.5rem 0;
+    padding: 0 0;
     position: relative;
 }
 
@@ -363,4 +383,10 @@ ul {
 
 .skills-colunas a:hover::after {
     width: 100%;
+}
+
+.img-galeria :hover {
+    transform: scale(1.05);
+    transform-origin: center;
+    transition: transform 0.3s; /* Aplica a transição ao estado de hover */
 }
