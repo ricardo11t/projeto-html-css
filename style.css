@@ -322,9 +322,13 @@ ul {
 }
 
 /* ==========================
-   Efeitos e Transições
+   Responsividade
 ========================== */
-::after {
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -333,4 +337,49 @@ ul {
     height: 2px;
     background: var(--cor-destaque);
     transition: width 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--cor-destaque);
+}
+.menu a:hover::after {
+    width: 100%;
+}
+.skills {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.skills-colunas {
+    list-style: none;
+    margin: rem;
+    flex: 1;
+}
+
+.skills-colunas a {
+    color: white;
+    text-decoration: none;
+    display: inline-block; /* Garante que o link ocupe toda a área disponível */
+    padding: 0.5rem 0;
+    position: relative; /* Necessário para o funcionamento do ::after */
+}
+
+.skills-colunas a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Alinha o ::after ao final do link */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cor-destaque);
+    transition: width 0.3s ease;
+}
+
+.skills-colunas a:hover {
+    color: var(--cor-destaque);
+}
+
+.skills-colunas a:hover::after {
+    width: 100%; /* Expande a linha ao passar o mouse */
 }
