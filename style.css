@@ -1,6 +1,336 @@
-title{
-    font-size: 2em;
-    color: #333;
+/* ==========================
+   Estilos Globais e Reset
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6rem;
+    color: var(--cor-texto);
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 25px;
+    unicode-bidi: isolate;
+}
+
+/* ==========================
+   Variáveis de Tema
+========================== */
+:root {
+    --cor-primaria: #0a243e;
+    --cor-secundaria: #0e476d;
+    --cor-destaque: #e74c3c;
+    --cor-texto: #333;
+    --cor-clara: #f9f9f9;
+    --sombra: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================
+   Layouts e Containers
+========================== */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
     text-align: center;
-    margin-top: 20px;
+}
+
+/* ==========================
+   Cabeçalho
+========================== */
+.cabeçalho {
+    background-color: var(--cor-primaria);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    height: 100px;
+}
+
+.cabeçalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.menu a {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 0;
+    color: white;
+    font-size: 18px;
+}
+
+/* ==========================
+   Componentes
+========================== */
+.logo {
+    width: 150px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.topicos {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.topico {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+}
+
+.topico h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.conteudo {
+    padding: 4rem 0;
+    background: var(--cor-clara);
+}
+
+/* ==========================
+   Banner
+========================== */
+.banner {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    color: var(--cor-clara);
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    text-align: left;
+    z-index: 2;
+    padding-left: 400px;
+}
+
+.banner h2 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.banner p {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.video-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ==========================
+   Sobre o Curso
+========================== */
+.sobre {
+    padding: 4rem;
+    font-size: 19px;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-top: 2rem;
+    gap: 2rem;
+}
+
+.sobre-conteudo img {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: var(--sombra);
+}
+
+.sobre-conteudo h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+.sobre-texto {
+    display: flex;
+    gap: 4rem;
+    font-size: 15px;
+}
+
+.sobre-texto ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+/* ==========================
+   Galeria
+========================== */
+.galeria {
+    padding: 4rem 0;
+    background: var(--cor-clara);
+}
+
+.grid-imagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.grid-imagens img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ==========================
+   Rodapé
+========================== */
+.rodape {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 3;
+    margin-top: 4rem;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.rodape a {
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+.tag p {
+    color: white;
+}
+
+/* ==========================
+   Skills
+========================== */
+.skills {
+    display: flex;
+    gap: 2rem;
+    width: 50%;
+}
+
+.skills-colunas {
+    list-style: none;
+    margin: 1rem;
+    flex: 1;
+}
+
+.skills-coluna a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+/* ==========================
+   Mapa
+========================== */
+.mapa iframe {
+    display: flex;
+    max-width: 600px;
+    max-height: 250px;
+}
+
+/* ==========================
+   Efeitos e Transições
+========================== */
+::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cor-destaque);
+    transition: width 0.3s ease;
 }
