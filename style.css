@@ -286,6 +286,56 @@ ul {
     border-radius: 8px;
 }
 
+@media (max-width: 1024px) {
+    .sobre-conteudo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 20px;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-imagens {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-imagens {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .grid-imagens {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        align-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .mapa {
+        overflow-x: scroll;
+    }
+}
 /* ==========================
    Rodapé
 ========================== */
